@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>  
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="aeDescriptor1_Stanford">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor1_Stanford.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="aeDescriptor2_LingPipe">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor2_LingPipe.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="aeDescriptor3_ScoreAnnotator">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor3_ScoreAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="aeDescriptor4-ScoreAnnotator2">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor4-ScoreAnnotator2.xml"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="aeDescriptor6_AbnerScore">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor6_AbnerScore.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="aeDescriptor5_Abner">
+      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor5_Abner.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>aaeDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>aeDescriptor1_Stanford</node>
+        <node>aeDescriptor2_LingPipe</node>
+      <node>aeDescriptor5_Abner</node>
+      <node>aeDescriptor6_AbnerScore</node>
+      <node>aeDescriptor3_ScoreAnnotator</node>
+        <node>aeDescriptor4-ScoreAnnotator2</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

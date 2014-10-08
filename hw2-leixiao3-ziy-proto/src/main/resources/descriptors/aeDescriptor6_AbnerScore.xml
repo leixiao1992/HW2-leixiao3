@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>  <annotatorImplementationName>abnerScoreAnnotator</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>aeDescriptor6_AbnerScore</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/deiis_types.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">cmu.edu.leixiao.Abnergene</type>
+        </inputs>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+  <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>
