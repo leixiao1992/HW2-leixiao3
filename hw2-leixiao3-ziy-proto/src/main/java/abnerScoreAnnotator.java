@@ -9,7 +9,6 @@ import org.apache.uima.jcas.JCas;
 import cmu.edu.leixiao.Abnergene;
 import cmu.edu.leixiao.gene;
 import cmu.edu.leixiao.genelingpipe;
-import cmu.edu.leixiao.token1;
 import edu.cmu.deiis.types.Token;
 
 /**
