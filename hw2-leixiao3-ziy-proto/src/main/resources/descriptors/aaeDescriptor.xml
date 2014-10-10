@@ -5,22 +5,16 @@
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
     <delegateAnalysisEngine key="aeDescriptor1_Stanford">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor1_Stanford.xml"/>
+      <import location="aeDescriptor1_Stanford.xml"/>
     </delegateAnalysisEngine>
     <delegateAnalysisEngine key="aeDescriptor2_LingPipe">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor2_LingPipe.xml"/>
-    </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="aeDescriptor3_ScoreAnnotator">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor3_ScoreAnnotator.xml"/>
-    </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="aeDescriptor4-ScoreAnnotator2">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor4-ScoreAnnotator2.xml"/>
+      <import location="aeDescriptor2_LingPipe.xml"/>
     </delegateAnalysisEngine>
   <delegateAnalysisEngine key="aeDescriptor6_AbnerScore">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor6_AbnerScore.xml"/>
+      <import location="aeDescriptor6_AbnerScore.xml"/>
     </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="aeDescriptor5_Abner">
-      <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/aeDescriptor5_Abner.xml"/>
+  <delegateAnalysisEngine key="aeDescriptor5_Abner">
+      <import location="aeDescriptor5_Abner.xml"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -36,8 +30,6 @@
         <node>aeDescriptor2_LingPipe</node>
       <node>aeDescriptor5_Abner</node>
       <node>aeDescriptor6_AbnerScore</node>
-      <node>aeDescriptor3_ScoreAnnotator</node>
-        <node>aeDescriptor4-ScoreAnnotator2</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

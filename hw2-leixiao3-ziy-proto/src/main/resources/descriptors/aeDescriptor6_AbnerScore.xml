@@ -8,11 +8,13 @@
     <description/>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters/>
-    <configurationParameterSettings/>
+    <configurationParameters>
+      </configurationParameters>
+    <configurationParameterSettings>
+      </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import location="/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/deiis_types.xml"/>
+        <import name="descriptors.deiis_types"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
@@ -21,8 +23,12 @@
       <capability>
         <inputs>
           <type allAnnotatorFeatures="true">cmu.edu.leixiao.Abnergene</type>
+        <type allAnnotatorFeatures="true">cmu.edu.leixiao.genelingpipe</type>
+          <type allAnnotatorFeatures="true">cmu.edu.leixiao.gene</type>
         </inputs>
-        <outputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.cmu.deiis.types.Token</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>

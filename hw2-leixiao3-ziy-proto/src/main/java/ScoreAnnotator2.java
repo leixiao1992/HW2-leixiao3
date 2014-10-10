@@ -11,6 +11,7 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.collection.CasConsumer_ImplBase;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import cmu.edu.leixiao.genelingpipe;
 import edu.cmu.deiis.types.Token;
@@ -23,6 +24,16 @@ import edu.cmu.deiis.types.Token;
  *
  */
 public class ScoreAnnotator2 extends JCasAnnotator_ImplBase {
+	
+	public static final String PARAM_INPUTDIR1 = "output1";
+	public static final String PARAM_INPUTDIR2 = "output2";
+	public static String oPath1;
+	public static String oPath2;
+
+	public void initialize(org.apache.uima.UimaContext aContext) throws ResourceInitializationException {
+		oPath1 = (String) aContext.getConfigParameterValue(PARAM_INPUTDIR1);
+		oPath2 = (String) aContext.getConfigParameterValue(PARAM_INPUTDIR2);
+	}
 
 	public static String readToString(String fileName) {
 		String encoding = "ISO-8859-1";
@@ -50,8 +61,10 @@ public class ScoreAnnotator2 extends JCasAnnotator_ImplBase {
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
-		String candidate = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/stanford.in");
-		String candidate1 = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/abner.in");
+		//String candidate = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/stanford.in");
+		//String candidate1 = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/abner.in");
+		String candidate = readToString(oPath1);
+		String candidate1 = readToString(oPath2);
 
 		FSIterator iter = aJCas.getAnnotationIndex(genelingpipe.type).iterator();
 

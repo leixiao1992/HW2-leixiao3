@@ -7,6 +7,7 @@ import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
 import cmu.edu.leixiao.Sentence;
 import cmu.edu.leixiao.genelingpipe;
@@ -29,6 +30,12 @@ import com.aliasi.util.AbstractExternalizable;
 
 public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
 
+	public static String oPath;
+
+	public void initialize(org.apache.uima.UimaContext aContext) throws ResourceInitializationException {
+		oPath = (String) aContext.getConfigParameterValue("output");
+	}
+	
 	@Override
 	public void process(JCas aJCas) throws AnalysisEngineProcessException {
 
@@ -37,14 +44,16 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
 		 * Sentence Type
 		 */
 		
-		String filename = "/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/ne-en-bio-genetag-4.HmmChunker";
-		File modelFile = new File(filename);
+		//String filename = "/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/ne-en-bio-genetag-4.HmmChunker";
+		//File modelFile = new File(filename);
 
 		// System.out.println("Reading chunker from file=" + modelFile);
 
 		Chunker chunker = null;
 		try {
-			chunker = (Chunker) AbstractExternalizable.readObject(modelFile);
+			//chunker = (Chunker) AbstractExternalizable.readObject(modelFile);
+			chunker = (Chunker) AbstractExternalizable.readResourceObject(LingPipeAnnotator.class,oPath);
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -91,6 +100,14 @@ public class LingPipeAnnotator extends JCasAnnotator_ImplBase {
 				String newtext3 = newtext2.replace("[", "");
 				String newtext4 = newtext3.replace("]", "");
 				String newtext5 = newtext4.replace("+", "");
+				
+				String k=docText.replace(" ","");
+				
+				String m=text.replace(" ", "");
+				begin=k.indexOf(m);
+				end=begin+m.length()-1;
+				
+				
 				name.setLgeneID(id);
 				name.setLgeneTag(newtext5);
 				name.setLhead(begin);

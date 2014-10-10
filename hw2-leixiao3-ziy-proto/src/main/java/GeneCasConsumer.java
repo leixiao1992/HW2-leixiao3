@@ -30,6 +30,8 @@ import edu.cmu.deiis.types.Token;
  *
  */
 public class GeneCasConsumer extends CasConsumer_ImplBase {
+	
+	
 
 	public static String readToString(String fileName) {
 		String encoding = "ISO-8859-1";
@@ -102,7 +104,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
 
 			String m = id + "|" + begin + " " + end + "|" + tag + "\n";
 
-			String regex = tag;
+			/*String regex = tag;
 
 			String candidate = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/sample.out");
 
@@ -115,7 +117,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
 
 			} else
 				// System.out.println("not found!!!");
-				System.out.println("total:" + total);
+				System.out.println("total:" + total);*/
 
 			try {
 				fileWriter.write(m);
@@ -130,7 +132,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
 		/**
 		 * calculate the precision of system
 		 */
-		int calculate = 0;
+	/*	int calculate = 0;
 		String can = readToString("/Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/data/sample.out");
 		String r = "\n";
 		Pattern pa = Pattern.compile(r);
@@ -154,7 +156,7 @@ public class GeneCasConsumer extends CasConsumer_ImplBase {
 		System.out.println("recall:" + recall);
 
 		double f1_score = 2 * (recall * precision) / (recall + precision);
-		System.out.println("f1_score:" + f1_score);
+		System.out.println("f1_score:" + f1_score);*/
 
 	}
 }

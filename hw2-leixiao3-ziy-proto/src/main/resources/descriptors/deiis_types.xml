@@ -205,5 +205,17 @@
         </featureDescription>
       </features>
     </typeDescription>
+  <typeDescription>
+      <name>cmu.edu.leixiao.token1</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>token1tag</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
   </types>
 </typeSystemDescription>

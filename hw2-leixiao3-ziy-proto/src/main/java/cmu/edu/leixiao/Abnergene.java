@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Oct 06 20:49:36 EDT 2014
+ * Updated by JCasGen Thu Oct 09 23:13:45 EDT 2014
  * XML source: /Users/leixiao/git/HW2-leixiao3/hw2-leixiao3-ziy-proto/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class Abnergene extends Annotation {
